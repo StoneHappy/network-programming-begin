@@ -1,4 +1,4 @@
-# my_cpp_empty_project
+# networking-programming-begin
 
 ## how to use it
 ```bash
@@ -32,6 +32,8 @@ Doxygen Documentation Generator
 Git History
 git-commit-plugin 
 Lua
+Remote
+Remote-WSL
 ```
 
 Install plug-ins, ``Ctrl + Shift + P`` call ``CMake: Configure`` to generate ninja config file.

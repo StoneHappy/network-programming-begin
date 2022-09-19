@@ -5,6 +5,6 @@
     ],
     "cmake.generator": "Ninja",
     "cmake.debugConfig": {
-        "args": ["--gtest_filter=networkprogramming.getaddrinfo"]
+        "args": ["--gtest_filter=networkprogramming.socket"]
     }
 }
