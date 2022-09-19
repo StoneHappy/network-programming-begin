@@ -8,8 +8,8 @@
             "type": "lldb",
             "request": "launch",
             "name": "Debug",
-            "program": "${workspaceFolder}/out/bin/AppName.exe",
-            "args": ["--gtest_filter=networkprogramming.getaddrinfo"],
+            "program": "${workspaceFolder}/out/bin/network-programming-testcase",
+            "args": ["--gtest_filter=networkprogramming.listen_accept"],
             "cwd": "${workspaceFolder}/out/bin"
         }
     ]

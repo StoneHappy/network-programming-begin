@@ -15,7 +15,7 @@ TEST(networkprogramming, connect)
     int status = getaddrinfo("www.example.com", "http", &hints, &res);
     if (status !=0) {
 		fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(status));
-        ASSERT_EQ(status, 0);
+        ASSERT_NE(status, 0);
 	}
     int sockfd = socket(res->ai_family, res->ai_socktype, res->ai_protocol);
     ASSERT_NE(sockfd, -1);

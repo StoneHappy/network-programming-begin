@@ -11,7 +11,7 @@ TEST(networkprogramming, socket)
     hints.ai_socktype = SOCK_STREAM;
 
     int status = getaddrinfo("www.example.com", "http", &hints, &res);
-    ASSERT_EQ(status, 0);
+    ASSERT_NE(status, 0);
     int s = socket(res->ai_family, res->ai_socktype, res->ai_protocol);
     ASSERT_NE(s, -1);
 }

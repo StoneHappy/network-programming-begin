@@ -20,7 +20,7 @@ TEST(networkprogramming, getaddrinfo)
 	int status = getaddrinfo(input0, NULL, &hints, &res);
     if (status !=0) {
 		fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(status));
-        ASSERT_EQ(status, 0);
+		ASSERT_NE(status, 0);
 	}
 
 	printf("IP address for %s: \n\n", input0);

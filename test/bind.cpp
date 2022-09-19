@@ -14,7 +14,7 @@ TEST(networkprogramming, bind)
     int status = getaddrinfo(NULL, "3490", &hints, &res);
     if (status !=0) {
 		fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(status));
-        ASSERT_EQ(status, 0);
+        ASSERT_NE(status, 0);
 	}
     int s = socket(res->ai_family, res->ai_socktype, res->ai_protocol);
     ASSERT_NE(s, -1);
