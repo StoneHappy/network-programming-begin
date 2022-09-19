@@ -8,7 +8,6 @@
 TEST(networkprogramming, getaddrinfo)
 {
 	struct addrinfo hints, *res, *p;
-	int status;
 	char ipstr[INET6_ADDRSTRLEN];
 
 	memset(&hints, 0, sizeof hints);
@@ -18,8 +17,10 @@ TEST(networkprogramming, getaddrinfo)
 	const char* input0 = "www.example.net";
 	// const char* input0 = "ipv6.example.com";
 
-	if ((status = getaddrinfo(input0, NULL, &hints, &res))!=0) {
+	int status = getaddrinfo(input0, NULL, &hints, &res);
+    if (status !=0) {
 		fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(status));
+        ASSERT_EQ(status, 0);
 	}
 
 	printf("IP address for %s: \n\n", input0);
