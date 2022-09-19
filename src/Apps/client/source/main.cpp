@@ -36,4 +36,7 @@ int main(int argc, char *argv[])
         close(sockfd);
         return -1;
     }
+
+    freeaddrinfo(res);
+    close(sockfd);
 }
