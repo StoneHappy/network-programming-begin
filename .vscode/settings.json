@@ -5,6 +5,6 @@
     ],
     "cmake.generator": "Ninja",
     "cmake.debugConfig": {
-        "args": ["--gtest_filter=networkprogramming.listen_accept"]
+        "args": ["--gtest_filter=networkprogramming.send_recv"]
     }
 }

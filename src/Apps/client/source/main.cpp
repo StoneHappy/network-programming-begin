@@ -1,5 +1,6 @@
 #include <cmdline.h>
 #include <cstdio>
+#include <cstring>
 #include <iostream>
 #include <netdb.h>
 #include <netinet/in.h>
@@ -36,6 +37,15 @@ int main(int argc, char *argv[])
         close(sockfd);
         return -1;
     }
+    char buf[512];
+    int len = strlen(buf);
+    status = recv(sockfd, buf, 512, 0);
+    if (status == -1) {
+        throw std::runtime_error("socket recv error!");
+        close(sockfd);
+        return -1;
+    }
+    std::cout << buf << std::endl;
 
     freeaddrinfo(res);
     close(sockfd);
